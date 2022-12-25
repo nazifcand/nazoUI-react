@@ -1,6 +1,7 @@
 import Alert from './components/Alert';
 import Avatar from './components/Avatar';
 import AvatarStack from './components/AvatarStack';
+import Badge from './components/Badge';
 import Container from './components/Container';
 import Section from './components/Section';
 
@@ -139,6 +140,31 @@ const App = () => {
             quibusdam corporis temporibus numquam sunt atque illum, nihil
             pariatur mollitia aspernatur, distinctio voluptatem!
           </Alert>
+        </Section>
+
+        <Section
+          title="Badge Component"
+          subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        >
+          <Badge label="Badge" size="small" /> <hr />
+          <Badge color="success" label="Badge" size="small" />
+          <Badge color="danger" label="Badge" size="small" />
+          <hr />
+          <Badge
+            color="danger"
+            label="Badge"
+            size="small"
+            outline
+            rounded
+            onClick={() => alert('xx')}
+            className="deneme"
+            style={{ cursor: 'pointer' }}
+          />
+          <hr />
+          <Badge color="warning" label="Badge" size="small" />
+          <Badge color="info" label="Badge" size="small" />
+          <Badge color="grey" label="Badge" size="small" />
+          <Badge color="dark" label="Badge" size="small" rounded />
         </Section>
       </Container>
     </>

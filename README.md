@@ -4,7 +4,7 @@
 
 - [ ] [Accordion](#)
 - [x] [Alert](#)
-- [ ] [Badge](#)
+- [x] [Badge](#)
 - [ ] [Breadcrumb](#)
 - [ ] [Button](#)
 - [ ] [Button Group](#)
