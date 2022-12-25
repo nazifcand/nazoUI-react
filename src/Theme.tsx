@@ -20,7 +20,7 @@ const theme: DefaultTheme = {
     color: '48, 50, 61',
   },
   sizes: {
-    xsmall: '.75rem',
+    xsmall: '.85rem',
     small: '1rem',
     medium: '1.5rem',
     large: '2rem',
