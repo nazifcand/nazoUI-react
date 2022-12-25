@@ -16,6 +16,7 @@ export const StyledAlert = styled.div<StyledProps>`
   padding: 1rem;
   box-sizing: border-box;
   line-height: 1.3;
+  font-size: ${({ theme }) => theme.sizes.xsmall};
   border-left: 4px solid rgb(${({ theme, color }) => theme.colors[color]});
   background-color: rgba(${({ theme, color }) => theme.colors[color]}, 0.25);
 
