@@ -41,6 +41,6 @@
 
 ## NOTES
 
-- Avatar componenti link olabilmeli
-- Section componenti acilir kapanir olmali
-- breadcrumb hover olunca iconlar hover efekti yememeli?
+- [ ] Avatar componenti link olabilmeli
+- [ ] Section componenti acilir kapanir olmali
+- [x] Breadcrumb hover olunca iconlar hover efekti yememeli?

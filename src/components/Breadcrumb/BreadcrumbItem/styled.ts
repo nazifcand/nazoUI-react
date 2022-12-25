@@ -6,13 +6,17 @@ export const StyledBreadcrumbItem = styled.a`
   font-size: ${({ theme }) => theme.sizes.xsmall};
 
   &:last-child {
-    color: rgb(${({ theme }) => theme.colors.color});
-    font-weight: bold;
+    span {
+      color: rgb(${({ theme }) => theme.colors.color});
+      font-weight: bold;
+    }
   }
 
   &:hover {
-    color: rgb(${({ theme }) => theme.colors.primary});
-    text-decoration: underline;
+    span {
+      color: rgb(${({ theme }) => theme.colors.primary});
+      text-decoration: underline;
+    }
   }
 
   & + &:before {

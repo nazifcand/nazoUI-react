@@ -9,7 +9,7 @@ interface Props extends HTMLAttributes<HTMLElement> {
 const BreadcrumbItem: FC<Props> = ({ label, url, ...props }) => {
   return (
     <StyledBreadcrumbItem href={url} target="_blank" {...props}>
-      {label}
+      <span>{label}</span>
     </StyledBreadcrumbItem>
   );
 };
