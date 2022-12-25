@@ -1,7 +1,7 @@
-import { FC, ReactNode } from 'react';
+import { FC, HTMLAttributes, ReactNode } from 'react';
 import { StyledAlert } from './styled';
 
-interface Props {
+interface Props extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode;
   color?:
     | 'primary'
@@ -13,8 +13,12 @@ interface Props {
     | 'dark';
 }
 
-const Alert: FC<Props> = ({ children, color = 'primary' }) => {
-  return <StyledAlert color={color}>{children}</StyledAlert>;
+const Alert: FC<Props> = ({ children, color = 'primary', ...args }) => {
+  return (
+    <StyledAlert color={color} {...args}>
+      {children}
+    </StyledAlert>
+  );
 };
 
 export default Alert;

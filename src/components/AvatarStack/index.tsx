@@ -39,10 +39,10 @@ const AvatarStack: FC<Props> = ({
   size = 'medium',
   rounded = false,
   circle = true,
-  ...props
+  ...args
 }) => {
   return (
-    <StyledAvatarStack size={size} {...props}>
+    <StyledAvatarStack size={size} {...args}>
       {list.slice(0, max).map((item, index) => (
         <Avatar
           key={index}

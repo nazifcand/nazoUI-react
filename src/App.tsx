@@ -92,7 +92,7 @@ const App = () => {
           subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit."
           closed
         >
-          <Alert>
+          <Alert id="deneme" onClick={() => alert('xx')}>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione,
             architecto nemo explicabo quae animi dolorum. Magnam repellendus
             quibusdam corporis temporibus numquam sunt atque illum, nihil
