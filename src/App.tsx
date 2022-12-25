@@ -3,6 +3,7 @@ import Alert from './components/Alert';
 import Avatar from './components/Avatar';
 import AvatarStack from './components/AvatarStack';
 import Badge from './components/Badge';
+import Breadcrumb from './components/Breadcrumb';
 import Container from './components/Container';
 import Section from './components/Section';
 
@@ -85,6 +86,21 @@ const ACCORDION_ITEMS = [
       </>
     ),
   },
+];
+
+const BREADCRUMB_ITEMS = [
+  { label: 'Emlak', url: '#' },
+  { label: 'Konut', url: '#' },
+  { label: 'Kiralık', url: '#' },
+  { label: 'Daire', url: '#' },
+];
+
+const BREADCRUMB_ITEMS_2 = [
+  { label: 'Anasayfa', url: '#' },
+  { label: 'Bilgisayarlar', url: '#' },
+  { label: 'Çevre Birimleri', url: '#' },
+  { label: 'Klavyeler', url: '#' },
+  { label: 'Mekanik Klavyeler', url: '#' },
 ];
 
 const App = () => {
@@ -213,8 +229,18 @@ const App = () => {
         <Section
           title="Accordion Component"
           subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+          closed
         >
           <Accordion active="title-2" items={ACCORDION_ITEMS} />
+        </Section>
+
+        <Section
+          title="Breadcrumb Component"
+          subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+          closed
+        >
+          <Breadcrumb items={BREADCRUMB_ITEMS} />
+          <Breadcrumb items={BREADCRUMB_ITEMS_2} />
         </Section>
       </Container>
     </>

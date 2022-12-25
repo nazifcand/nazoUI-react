@@ -5,7 +5,7 @@
 - [x] [Accordion](#)
 - [x] [Alert](#)
 - [x] [Badge](#)
-- [ ] [Breadcrumb](#)
+- [x] [Breadcrumb](#)
 - [ ] [Button](#)
 - [ ] [Button Group](#)
 - [ ] [Card](#)
@@ -43,3 +43,4 @@
 
 - Avatar componenti link olabilmeli
 - Section componenti acilir kapanir olmali
+- breadcrumb hover olunca iconlar hover efekti yememeli?
