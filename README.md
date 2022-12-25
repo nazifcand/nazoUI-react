@@ -2,7 +2,7 @@
 
 ## Index
 
-- [ ] [Accordion](#)
+- [x] [Accordion](#)
 - [x] [Alert](#)
 - [x] [Badge](#)
 - [ ] [Breadcrumb](#)
