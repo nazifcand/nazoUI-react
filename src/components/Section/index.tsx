@@ -43,17 +43,17 @@ const Section: FC<Props> = ({
   actions,
   closed = false,
 }) => {
-  const [state, setState] = useState(closed);
+  const [isClosed, setIsClosed] = useState(closed);
 
   return (
-    <StyledSection closed={state}>
+    <StyledSection closed={isClosed}>
       <SectionHeader
         title={title}
         subTitle={subTitle}
         actions={actions}
-        onClick={() => setState(!state)}
+        onClick={() => setIsClosed(!isClosed)}
       />
-      <SectionContent>{children}</SectionContent>
+      {!isClosed && <SectionContent>{children}</SectionContent>}
     </StyledSection>
   );
 };
