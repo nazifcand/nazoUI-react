@@ -1,3 +1,4 @@
+import Accordion from './components/Accordion';
 import Alert from './components/Alert';
 import Avatar from './components/Avatar';
 import AvatarStack from './components/AvatarStack';
@@ -42,6 +43,47 @@ const USER_LIST = [
   {
     image: 'https://i.pravatar.cc/150?img=10',
     label: 'CD',
+  },
+];
+
+const ACCORDION_ITEMS = [
+  {
+    title: 'Title 1',
+    value: 'title-1',
+    content: (
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia animi,
+        libero cupiditate similique veniam consectetur modi eaque, eos deleniti
+        reiciendis dolorem nemo suscipit doloribus! Labore similique eveniet quo
+        enim ullam?
+      </p>
+    ),
+  },
+  {
+    title: 'Title 2',
+    value: 'title-2',
+    content:
+      ' Lorem, ipsum dolor sit amet consectetur adipisicing elit.Quia animi, libero cupiditate similique veniam consecteturmodi eaque, eos deleniti reiciendis dolorem nemo suscipitdoloribus! Labore similique eveniet quo enim ullam?',
+  },
+  {
+    title: 'Title 3',
+    value: 'title-3',
+    content: (
+      <>
+        <p>deneme content</p>
+        <br />
+        <Badge
+          color="danger"
+          label="Badge"
+          size="small"
+          outline
+          rounded
+          onClick={() => alert('xx')}
+          className="deneme"
+          style={{ cursor: 'pointer' }}
+        />
+      </>
+    ),
   },
 ];
 
@@ -145,6 +187,7 @@ const App = () => {
         <Section
           title="Badge Component"
           subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+          closed
         >
           <Badge label="Badge" size="small" /> <hr />
           <Badge color="success" label="Badge" size="small" />
@@ -165,6 +208,13 @@ const App = () => {
           <Badge color="info" label="Badge" size="small" />
           <Badge color="grey" label="Badge" size="small" />
           <Badge color="dark" label="Badge" size="small" rounded />
+        </Section>
+
+        <Section
+          title="Accordion Component"
+          subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        >
+          <Accordion active="title-2" items={ACCORDION_ITEMS} />
         </Section>
       </Container>
     </>
