@@ -1,5 +1,6 @@
 import { FC, HTMLAttributes, ReactNode } from 'react';
 import styled from 'styled-components';
+import { FaChevronDown } from 'react-icons/fa';
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
   title: string;
@@ -10,7 +11,10 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
 
 const StyledAccordionItem = styled.div``;
 
-const AccordionItemHeader = styled.div`
+const AccordionItemHeader = styled.div<{
+  value: string | number;
+  active?: string | number;
+}>`
   width: 100%;
   height: 45px;
   display: flex;
@@ -24,6 +28,19 @@ const AccordionItemHeader = styled.div`
     font-weight: bold;
     font-size: ${({ theme }) => theme.heading.h4};
   }
+
+  svg {
+    transition: ${({ theme }) => theme.transitionDelay} transform ease;
+  }
+
+  ${({ active, value }) =>
+    active == value &&
+    `
+  &{
+    svg{
+      transform:rotate(180deg)
+    }
+  }`}
 `;
 
 const AccordionItemContent = styled.div`
@@ -39,9 +56,9 @@ const AccordionItem: FC<Props> = ({
 }) => {
   return (
     <StyledAccordionItem {...args}>
-      <AccordionItemHeader>
+      <AccordionItemHeader active={active} value={value}>
         <h4>{title}</h4>
-        <i>x</i>
+        <FaChevronDown />
       </AccordionItemHeader>
 
       {active == value && (
