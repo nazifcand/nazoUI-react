@@ -1,3 +1,4 @@
+import Alert from './components/Alert';
 import Avatar from './components/Avatar';
 import AvatarStack from './components/AvatarStack';
 import Container from './components/Container';
@@ -81,6 +82,60 @@ const App = () => {
           <AvatarStack list={USER_LIST} max={4} circle size="small" />
           <AvatarStack list={USER_LIST} circle />
           <AvatarStack list={USER_LIST} max={7} size="large" />
+        </Section>
+
+        <Section
+          title="Alert Component"
+          subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        >
+          <Alert>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione,
+            architecto nemo explicabo quae animi dolorum. Magnam repellendus
+            quibusdam corporis temporibus numquam sunt atque illum, nihil
+            pariatur mollitia aspernatur, distinctio voluptatem!
+          </Alert>
+
+          <Alert color="success">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione,
+            architecto nemo explicabo quae animi dolorum. Magnam repellendus
+            quibusdam corporis temporibus numquam sunt atque illum, nihil
+            pariatur mollitia aspernatur, distinctio voluptatem!
+          </Alert>
+
+          <Alert color="danger">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione,
+            architecto nemo explicabo quae animi dolorum. Magnam repellendus
+            quibusdam corporis temporibus numquam sunt atque illum, nihil
+            pariatur mollitia aspernatur, distinctio voluptatem!
+          </Alert>
+
+          <Alert color="warning">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione,
+            architecto nemo explicabo quae animi dolorum. Magnam repellendus
+            quibusdam corporis temporibus numquam sunt atque illum, nihil
+            pariatur mollitia aspernatur, distinctio voluptatem!
+          </Alert>
+
+          <Alert color="info">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione,
+            architecto nemo explicabo quae animi dolorum. Magnam repellendus
+            quibusdam corporis temporibus numquam sunt atque illum, nihil
+            pariatur mollitia aspernatur, distinctio voluptatem!
+          </Alert>
+
+          <Alert color="grey">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione,
+            architecto nemo explicabo quae animi dolorum. Magnam repellendus
+            quibusdam corporis temporibus numquam sunt atque illum, nihil
+            pariatur mollitia aspernatur, distinctio voluptatem!
+          </Alert>
+
+          <Alert color="dark">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione,
+            architecto nemo explicabo quae animi dolorum. Magnam repellendus
+            quibusdam corporis temporibus numquam sunt atque illum, nihil
+            pariatur mollitia aspernatur, distinctio voluptatem!
+          </Alert>
         </Section>
       </Container>
     </>

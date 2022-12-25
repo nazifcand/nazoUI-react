@@ -3,7 +3,7 @@
 ## Index
 
 - [ ] [Accordion](#)
-- [ ] [Alert](#)
+- [x] [Alert](#)
 - [ ] [Badge](#)
 - [ ] [Breadcrumb](#)
 - [ ] [Button](#)
@@ -34,11 +34,12 @@
 - [ ] [Tooltip](#)
 - [ ] [Typography](#)
 - [x] [Avatar](#)
-- [ ] [Avatar Stack](#)
-- [ ] [Section](#)
+- [x] [Avatar Stack](#)
+- [x] [Section](#)
 
 ## COMPONENTS
 
 ## NOTES
 
 - Avatar componenti link olabilmeli
+- Section componenti acilir kapanir olmali

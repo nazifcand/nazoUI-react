@@ -33,13 +33,6 @@ const theme: DefaultTheme = {
     h5: '.83rem',
     h6: '.67rem',
   },
-  borderRadius: {
-    small: '0.25rem',
-    medium: '.5rem',
-    large: '1rem',
-    half: '50%',
-    full: '100%',
-  },
   transitionDelay: '.35s',
 };
 

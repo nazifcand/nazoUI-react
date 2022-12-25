@@ -31,13 +31,6 @@ declare module 'styled-components' {
       h5: string;
       h6: string;
     };
-    borderRadius: {
-      small: string;
-      medium: string;
-      large: string;
-      half: string;
-      full: string;
-    };
     transitionDelay: string;
   }
 }
