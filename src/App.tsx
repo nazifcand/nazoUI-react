@@ -51,6 +51,7 @@ const App = () => {
         <Section
           title="Avatar Component"
           subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+          closed
         >
           <Avatar
             image="https://i.pravatar.cc/150?img=12"
@@ -77,6 +78,7 @@ const App = () => {
         <Section
           title="Avatar Stack Component"
           subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+          closed
         >
           <AvatarStack list={USER_LIST} circle size="xsmall" />
           <AvatarStack list={USER_LIST} max={4} circle size="small" />
@@ -87,6 +89,7 @@ const App = () => {
         <Section
           title="Alert Component"
           subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+          closed
         >
           <Alert>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione,
