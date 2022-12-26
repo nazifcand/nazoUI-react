@@ -108,7 +108,7 @@ const App = () => {
     <>
       <Container>
         <Section
-          title="Avatar Component"
+          title="Avatar"
           subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit."
           closed
         >
@@ -135,7 +135,7 @@ const App = () => {
         </Section>
 
         <Section
-          title="Avatar Stack Component"
+          title="Avatar Stack"
           subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit."
           closed
         >
@@ -146,7 +146,7 @@ const App = () => {
         </Section>
 
         <Section
-          title="Alert Component"
+          title="Alert"
           subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit."
           closed
         >
@@ -201,7 +201,7 @@ const App = () => {
         </Section>
 
         <Section
-          title="Badge Component"
+          title="Badge"
           subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit."
           closed
         >
@@ -227,7 +227,7 @@ const App = () => {
         </Section>
 
         <Section
-          title="Accordion Component"
+          title="Accordion"
           subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit."
           closed
         >
@@ -235,7 +235,7 @@ const App = () => {
         </Section>
 
         <Section
-          title="Breadcrumb Component"
+          title="Breadcrumb"
           subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit."
           closed
         >

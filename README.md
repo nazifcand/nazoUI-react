@@ -43,4 +43,5 @@
 
 - [ ] Avatar componenti link olabilmeli
 - [ ] Section componenti acilir kapanir olmali
+- [ ] Circle badge'ler eklenmeli
 - [x] Breadcrumb hover olunca iconlar hover efekti yememeli?
