@@ -6,8 +6,8 @@ interface StyledProps {
 }
 
 export const StyledPage = styled.div<StyledProps>`
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
