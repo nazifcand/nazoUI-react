@@ -45,6 +45,7 @@
 - [x] Section componenti acilir kapanir olmali
 - [ ] Circle badge'ler eklenmeli
 - [x] Breadcrumb hover olunca iconlar hover efekti yememeli?
+- [ ] Pagination kisimindaki +-3 olayi dinamik hale getirilebilir
 
 ## PERSONAL NOTES
 
