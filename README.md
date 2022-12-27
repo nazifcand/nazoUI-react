@@ -20,7 +20,7 @@
 - [ ] [Loader](#)
 - [ ] [Modal](#)
 - [ ] [Overflow Menu](#)
-- [ ] [Pagination](#)
+- [x] [Pagination](#)
 - [ ] [Popover](#)
 - [ ] [Radio](#)
 - [ ] [Search Select](#)

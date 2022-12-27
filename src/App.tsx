@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Accordion from './components/Accordion';
 import Alert from './components/Alert';
 import Avatar from './components/Avatar';
@@ -5,6 +6,7 @@ import AvatarStack from './components/AvatarStack';
 import Badge from './components/Badge';
 import Breadcrumb from './components/Breadcrumb';
 import Container from './components/Container';
+import Pagination from './components/Pagination';
 import Section from './components/Section';
 
 const USER_LIST = [
@@ -104,6 +106,8 @@ const BREADCRUMB_ITEMS_2 = [
 ];
 
 const App = () => {
+  const [page, setPage] = useState(7);
+
   return (
     <>
       <Container>
@@ -241,6 +245,18 @@ const App = () => {
         >
           <Breadcrumb items={BREADCRUMB_ITEMS} />
           <Breadcrumb items={BREADCRUMB_ITEMS_2} />
+        </Section>
+
+        <Section
+          title="Pagination"
+          subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        >
+          <Pagination
+            total={113}
+            page={page}
+            pageSize={10}
+            onChange={(page) => setPage(page)}
+          />
         </Section>
       </Container>
     </>
