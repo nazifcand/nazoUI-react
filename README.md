@@ -42,6 +42,10 @@
 ## NOTES
 
 - [ ] Avatar componenti link olabilmeli
-- [ ] Section componenti acilir kapanir olmali
+- [x] Section componenti acilir kapanir olmali
 - [ ] Circle badge'ler eklenmeli
 - [x] Breadcrumb hover olunca iconlar hover efekti yememeli?
+
+## PERSONAL NOTES
+
+- size'lari sabitlemem gerek, belli bir size sistemi kuramadim kafamda simdilik. Ama rem em gibi belli bir degere gore degisken bir size sistemi yapmak istiyorum.
