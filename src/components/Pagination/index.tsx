@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, HTMLAttributes } from 'react';
 import { StyledPagination } from './styled';
 import Page from './Page';
 import {

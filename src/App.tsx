@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { ReactNode, useState } from 'react';
 import Accordion from './components/Accordion';
 import Alert from './components/Alert';
 import Avatar from './components/Avatar';
@@ -8,6 +8,22 @@ import Breadcrumb from './components/Breadcrumb';
 import Container from './components/Container';
 import Pagination from './components/Pagination';
 import Section from './components/Section';
+import Table from './components/Table';
+import PRODUCTS from '../data/products.json';
+
+interface ProductItem {
+  id: number;
+  title: string;
+  description: string;
+  price: number;
+  discountPercentage: number;
+  rating: number;
+  stock: number;
+  brand: string;
+  category: string;
+  thumbnail: string;
+  images: string[];
+}
 
 const USER_LIST = [
   {
@@ -103,6 +119,70 @@ const BREADCRUMB_ITEMS_2 = [
   { label: 'Çevre Birimleri', url: '#' },
   { label: 'Klavyeler', url: '#' },
   { label: 'Mekanik Klavyeler', url: '#' },
+];
+
+const TABLE_COLUMNS = [
+  {
+    title: 'Title',
+    selector: (row: ProductItem): ReactNode => (
+      <p
+        style={{
+          width: '100%',
+          whiteSpace: 'nowrap',
+          overflow: 'hidden',
+          textOverflow: 'ellipsis',
+        }}
+      >
+        {row.title}
+      </p>
+    ),
+  },
+  {
+    title: 'Price',
+    selector: (row: ProductItem): string => `${row.price.toFixed(2)} TL`,
+  },
+
+  {
+    title: 'Rating',
+    selector: (row: ProductItem): number => row.rating,
+  },
+  {
+    title: 'Stock',
+    selector: (row: ProductItem): number => row.stock,
+  },
+  {
+    title: 'Brand',
+    selector: (row: ProductItem): ReactNode => (
+      <a
+        href={`https://www.google.com/search?q=${row.brand}&oq=${row.brand}&aqs=chrome..69i57j0i512l9.766j0j7&sourceid=chrome&ie=UTF-8`}
+        target="_blank"
+      >
+        {row.brand}
+      </a>
+    ),
+  },
+  {
+    title: 'Category',
+    selector: (row: ProductItem): ReactNode => (
+      <a
+        href={`https://www.google.com/search?q=${row.category}&oq=${row.category}&aqs=chrome..69i57j0i512l9.766j0j7&sourceid=chrome&ie=UTF-8`}
+        target="_blank"
+      >
+        {row.category}
+      </a>
+    ),
+  },
+  {
+    title: '',
+    selector: (row: ProductItem): ReactNode => (
+      <>
+        <button onClick={() => alert(`EDIT => ${row.title}`)}>{'EDIT'}</button>
+        <button onClick={() => alert(`DELETE => ${row.title}`)}>
+          {'DELETE'}
+        </button>
+      </>
+    ),
+  },
 ];
 
 const App = () => {
@@ -250,12 +330,25 @@ const App = () => {
         <Section
           title="Pagination"
           subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+          closed
         >
           <Pagination
             total={113}
             page={page}
             pageSize={10}
             onChange={(page) => setPage(page)}
+          />
+        </Section>
+
+        <Section
+          title="Table"
+          subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        >
+          <Table
+            columns={TABLE_COLUMNS}
+            data={PRODUCTS}
+            perPage={13}
+            pagination
           />
         </Section>
       </Container>
