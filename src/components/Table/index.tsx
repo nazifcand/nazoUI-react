@@ -1,6 +1,16 @@
-import { FC, HTMLAttributes, MouseEvent, useState } from 'react';
+import { FC, HTMLAttributes, MouseEvent, useMemo, useState } from 'react';
 import styled from 'styled-components';
 import Pagination from '../Pagination';
+import {
+  Row,
+  StyledTable,
+  TableBody,
+  TableCell,
+  TableFooter,
+  TableHead,
+  TableTitle,
+  TableWrapper,
+} from './styled';
 
 interface ColumnItem {
   title: string;
@@ -14,51 +24,8 @@ interface Props extends HTMLAttributes<HTMLTableElement> {
   defaultPage?: number;
   perPage?: number;
   pagination?: boolean;
+  pageChange?: (page: number) => void;
 }
-
-const StyledTable = styled.div``;
-
-const TableHead = styled.div``;
-
-const TableBody = styled.div``;
-
-const Row = styled.div`
-  display: flex;
-  align-items: stretch;
-  cursor: pointer;
-
-  & + & {
-    border-top: 1px solid rgb(${({ theme }) => theme.colors.grey});
-  }
-
-  &:nth-child(2n + 2) {
-    background-color: rgba(${({ theme }) => theme.colors.grey}, 0.25);
-  }
-
-  &:hover {
-    background-color: rgb(${({ theme }) => theme.colors.grey});
-  }
-`;
-
-const TableCell = styled.div<{ flex?: number }>`
-  flex: ${({ flex }) => (flex ? flex : 1)};
-  padding: 0 0.5rem;
-  vertical-align: middle;
-  box-sizing: border-box;
-  min-width: 100px;
-  height: 100%;
-  height: 45px;
-  display: flex;
-  align-items: center;
-  font-size: ${({ theme }) => theme.sizes.xsmall};
-`;
-
-const TableTitle = styled(TableCell)`
-  background-color: tomato;
-  color: #fff;
-  white-space: nowrap;
-  font-weight: 500;
-`;
 
 const Table: FC<Props> = ({
   data,
@@ -66,21 +33,34 @@ const Table: FC<Props> = ({
   pagination = false,
   perPage = 10,
   defaultPage = 1,
+  pageChange,
   ...args
 }) => {
   const [page, setPage] = useState(defaultPage);
   const start = (page - 1) * perPage;
   const end = start + perPage;
 
-  let filteredData = data;
+  let filteredData = useMemo(
+    () =>
+      data.filter((item) => {
+        console.log('x');
+        return item;
+      }),
+    []
+  );
 
   // with pagination
   if (pagination) {
     filteredData = data.slice(start, end);
   }
 
+  const handlePageChange = (page: number) => {
+    setPage(page);
+    pageChange && pageChange(page);
+  };
+
   return (
-    <>
+    <TableWrapper>
       <StyledTable {...args}>
         <TableHead>
           <Row>
@@ -106,14 +86,20 @@ const Table: FC<Props> = ({
       </StyledTable>
 
       {pagination && (
-        <Pagination
-          total={data.length}
-          page={page}
-          pageSize={perPage}
-          onChange={(page) => setPage(page)}
-        />
+        <TableFooter>
+          <Pagination
+            total={data.length}
+            page={page}
+            pageSize={perPage}
+            onChange={handlePageChange}
+          />
+          <div>
+            <strong>{start + 1}</strong> - <strong>{end}</strong> of{' '}
+            <strong>{data.length}</strong>
+          </div>
+        </TableFooter>
       )}
-    </>
+    </TableWrapper>
   );
 };
 

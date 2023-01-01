@@ -13,8 +13,12 @@ const GlobalStyle = createGlobalStyle`
   }
 
   * {
-  font-family: ${({ theme }) => theme.fonts.main} !important;
-}
+    font-family: ${({ theme }) => theme.fonts.main} !important;
+  }
+
+  b,strong{
+    font-weight:500
+  }
 `;
 
 export default GlobalStyle;

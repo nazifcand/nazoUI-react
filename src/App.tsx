@@ -185,6 +185,10 @@ const TABLE_COLUMNS = [
   },
 ];
 
+const handleTablePageChange = (page: number) => {
+  console.log(page);
+};
+
 const App = () => {
   const [page, setPage] = useState(7);
 
@@ -343,11 +347,13 @@ const App = () => {
         <Section
           title="Table"
           subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+          closed
         >
           <Table
             columns={TABLE_COLUMNS}
             data={PRODUCTS}
-            perPage={13}
+            perPage={10}
+            pageChange={handleTablePageChange}
             pagination
           />
         </Section>

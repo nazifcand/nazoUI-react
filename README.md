@@ -2,6 +2,7 @@
 
 ## Index
 
+- [x] [Container](#)
 - [x] [Accordion](#)
 - [x] [Alert](#)
 - [x] [Badge](#)
@@ -26,7 +27,7 @@
 - [ ] [Search Select](#)
 - [ ] [Select](#)
 - [ ] [Stepper](#)
-- [ ] [Table](#)
+- [x] [Table](#)
 - [ ] [Tabs](#)
 - [ ] [Tag](#)
 - [ ] [Textarea](#)
@@ -50,3 +51,8 @@
 ## PERSONAL NOTES
 
 - size'lari sabitlemem gerek, belli bir size sistemi kuramadim kafamda simdilik. Ama rem em gibi belli bir degere gore degisken bir size sistemi yapmak istiyorum.
+
+- inputlari ayarladiktan sonra table icin arama eklenmeli.
+- belki table icin custom bir pagination tasarimi olabilir
+- table siralama eklenmeli
+- table icin column'lari goster gizle eklenmeli
