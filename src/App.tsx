@@ -10,6 +10,7 @@ import Pagination from './components/Pagination';
 import Section from './components/Section';
 import Table from './components/Table';
 import PRODUCTS from '../data/products.json';
+import Tag from './components/Tag';
 
 interface ProductItem {
   id: number;
@@ -356,6 +357,43 @@ const App = () => {
             pageChange={handleTablePageChange}
             pagination
           />
+        </Section>
+
+        <Section
+          title="Tag"
+          subTitle="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        >
+          <Tag label="Tag" />
+          <Tag color="success" label="Tag" />
+          <Tag color="danger" label="Tag" />
+          <Tag color="warning" label="Tag" />
+          <Tag color="info" label="Tag" />
+          <Tag color="grey" label="Tag" />
+          <Tag color="dark" label="Tag" />
+          <hr />
+          <Tag label="Tag" rounded />
+          <Tag color="success" label="Tag" rounded />
+          <Tag color="danger" label="Tag" rounded />
+          <Tag color="warning" label="Tag" />
+          <Tag color="info" label="Tag" rounded />
+          <Tag color="grey" label="Tag" rounded />
+          <Tag color="dark" label="Tag" rounded />
+          <hr />
+          <Tag label="Tag" outline />
+          <Tag color="success" label="Tag" outline />
+          <Tag color="danger" label="Tag" outline />
+          <Tag color="warning" label="Tag" outline />
+          <Tag color="info" label="Tag" outline />
+          <Tag color="grey" label="Tag" outline />
+          <Tag color="dark" label="Tag" outline />
+          <hr />
+          <Tag label="Tag" outline rounded onClick={() => alert('x')} />
+          <Tag color="success" label="Tag" outline rounded />
+          <Tag color="danger" label="Tag" outline rounded />
+          <Tag color="warning" label="Tag" outline rounded />
+          <Tag color="info" label="Tag" outline rounded />
+          <Tag color="grey" label="Tag" outline rounded />
+          <Tag color="dark" label="Tag" outline rounded />
         </Section>
       </Container>
     </>
