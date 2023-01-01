@@ -56,3 +56,4 @@
 - belki table icin custom bir pagination tasarimi olabilir
 - table siralama eklenmeli
 - table icin column'lari goster gizle eklenmeli
+- STORYBOOK EKLENMELI!
